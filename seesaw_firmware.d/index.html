@@ -59,6 +59,7 @@ the (otherwise unpowered) Seesaw Breakout module.
     <li>Adalogger supplies 3.3VDC on a pin near the corner where the USB connector is. RST, 3V3, AREF, GND are there (in that sequence, from the corner).  Use 3V3.
     <li>Dean Miller chose 3VO (not Vout) as the interconnect with Gemma M0 power supply.  Schematic of Gemma M0 shows that it's the output of the voltage regulator on the 'client' board (Gemma M0 in the case of the tutorial) that is the connection point for power.  In other words, if there is a current path *through* the onboard 3.3v regulator (from unregulated source, through the regulator, to the output) then you've connected things wrong.  The idea is to connect the Adalogger's regulator's output to the very same spot the local regulator's output is connected to (thus bypassing it).
     <li>Time index: Fri Jan 12 19:50:09 UTC 2018
+    <li>The proper connection to Seesaw Breakout is the 3.3V pin next to the GND pin. Avoid the +5V pin (the only other logical interconnect candidate for supplying power to Seesaw Breakout).
 </ul>
 
 <li><em>future</em>
