@@ -12,34 +12,33 @@ img {
 <ul>
 <li>Time-index: Fri Jan 12 17:52:26 UTC 2018 package arrival
 <li>find <a href="https://learn.adafruit.com/programming-an-m0-using-an-arduino"
-           >https://learn.adafruit.com/programming-an-m0-using-an-arduino</a>
+    >https://learn.adafruit.com/programming-an-m0-using-an-arduino</a>
 
-<li>Find: <a href="https://www.adafruit.com/product/3657"
-          >https://www.adafruit.com/product/3657</a>
+<li>find <a href="https://www.adafruit.com/product/3657"
+    >https://www.adafruit.com/product/3657</a>
 
-<li>Find: <a href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/"
-          >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/</a>
+<li>find <a href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/"
+    >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/</a>
+
+<li>find <a href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/pinouts"
+    >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/pinouts</a>
 
 <ul>
     <li>find <a href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/downloads"
-         >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/downloads</a>
+        >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/downloads</a>
 which has the schematic diagram for the Seesaw.
     <li>The schematic for the Seesaw Breakout is needed as a sanity check,
 before connecting the 3.3v feed from the Adalogger, to
 the (otherwise unpowered) Seesaw Breakout module.
 </ul>
 
-
-
-
-
-<li>Find: <a href="https://github.com/adafruit/seesaw/"
-          >https://github.com/adafruit/seesaw/</a>
+<li>find <a href="https://github.com/adafruit/seesaw/"
+    >https://github.com/adafruit/seesaw/</a>
 
 <!-- a href="https://github.com/adafruit/seesaw/issues/4" --!>
 <li>find <a href="https://github.com/adafruit/seesaw/issues/4#issuecomment-356359801"
-         >https://github.com/adafruit/seesaw/issues/4#issuecomment-356359801</a>
-          which has the needed <em>firmware</em>.
+    >https://github.com/adafruit/seesaw/issues/4#issuecomment-356359801</a>
+    which has the needed <em>firmware</em>.
 
 <li>SD card in its carrier; that into the host PC's SD card slot
 <li>mount the SD card on the host PC such that df shows it is present (use Nautilus)
@@ -58,8 +57,10 @@ the (otherwise unpowered) Seesaw Breakout module.
     <li>The Adalogger would be the source of the supply voltage, as it'll be the one connected via USB to the host PC.  In the case of the Seesaw Breakout, this is perfectly obvious since it doesn't have an USB connector!
     <li>Adalogger supplies 3.3VDC on a pin near the corner where the USB connector is. RST, 3V3, AREF, GND are there (in that sequence, from the corner).  Use 3V3.
     <li>Dean Miller chose 3VO (not Vout) as the interconnect with Gemma M0 power supply.  Schematic of Gemma M0 shows that it's the output of the voltage regulator on the 'client' board (Gemma M0 in the case of the tutorial) that is the connection point for power.  In other words, if there is a current path *through* the onboard 3.3v regulator (from unregulated source, through the regulator, to the output) then you've connected things wrong.  The idea is to connect the Adalogger's regulator's output to the very same spot the local regulator's output is connected to (thus bypassing it).
-    <li>Time index: Fri Jan 12 19:50:09 UTC 2018
+    <li>Time-index: Fri Jan 12 19:50:09 UTC 2018
     <li>The proper connection to Seesaw Breakout is the 3.3V pin next to the GND pin. Avoid the +5V pin (the only other logical interconnect candidate for supplying power to Seesaw Breakout).
+    <li>Take one last look at the pinout diagram for the Seesaw Breakout.
+    <li>Time-index: Fri Jan 12 20:23:45 UTC 2018
 </ul>
 
 <li><em>future</em>
