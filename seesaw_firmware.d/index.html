@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><title>wa1tnr on github.io</title>
+<style>
+img {
+    border-radius: 4%
+}
+</style>
+</head><body>
+
+<p>&nbsp;</p>
+
+
+<p><strong>BROKEN</strong><p>This file has not been adapted for its new place in
+the wa1tnr.github.io directories hierarchy.<p>&nbsp;<p>&nbsp;
+
+
+<ul>
+<li>Time-index: Fri Jan 12 17:52:26 UTC 2018 package arrival
+<li>find <a href="https://learn.adafruit.com/programming-an-m0-using-an-arduino"
+           >https://learn.adafruit.com/programming-an-m0-using-an-arduino</a>
+
+<li>Find: <a href="https://www.adafruit.com/product/3657"
+          >https://www.adafruit.com/product/3657</a>
+
+<li>Find: <a href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/"
+          >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/</a>
+
+<ul>
+    <li>find <a href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/downloads"
+         >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/downloads</a>
+which has the schematic diagram for the Seesaw.
+    <li>The schematic for th Seesaw Breakout is needed as a sanity check,
+before connecting the 3.3v feed from the Adalogger, to
+the (otherwise unpowered) Seesaw Breakout module.
+</ul>
+
+
+
+
+
+<li>Find: <a href="https://github.com/adafruit/seesaw/"
+          >https://github.com/adafruit/seesaw/</a>
+
+<!-- a href="https://github.com/adafruit/seesaw/issues/4" --!>
+<li>find <a href="https://github.com/adafruit/seesaw/issues/4#issuecomment-356359801"
+         >https://github.com/adafruit/seesaw/issues/4#issuecomment-356359801</a>
+          which has the needed <em>firmware</em>.
+
+<li>SD card in its carrier; that into the host PC's SD card slot
+<li>mount the SD card on the host PC such that df shows it is present (use Nautilus)
+    <ul>
+        <li><code>exec /usr/bin/nautilus --no-desktop "$@" &gt;/dev/null 2&gt;&amp;1 &amp;</code>
+    </ul>
+
+<li>unzip the firmware file
+<li>take a checksum of the firmware .bin file (md5sum is good here)
+<li>rename it to fw.bin (mine was seesaw.bin, from the .zip file)
+<li>give it 30 seconds to sync, then eject the SD card (logically, using the user interface, such as Nautilus -- not physically)
+<li>df to check mount points (should be there before the eject was done, but not after)
+<li>Once df shows the volume is no longer mounted, it is safe to remove the SD card physically.  You can also use 'eject' at some point (on the command line).  Nautilus ought to have taken care of that, one would suppose.
+<li>Wire them up!  Use the tutorial.  The tricky pins are the 3 volt pins as you have to decide where the power comes from and what it is used to supply power to.
+<ul>
+    <li>The Adalogger would be the source of the supply voltage, as it'll be the one connected via USB to the host PC.  In the case of the Seesaw Breakout, this is perfectly obvious since it doesn't have an USB connector!
+    <li>Adalogger supplies 3.3VDC on a pin near the corner where the USB connector is. RST, 3V3, AREF, GND are there (in that sequence, from the corner).  Use 3V3.
+    <li>Dean Miller chose 3VO (not Vout) as the interconnect with Gemma M0 power supply.  Schematic of Gemma M0 shows that it's the output of the voltage regulator on the 'client' board (Gemma M0 in the case of the tutorial) that is the connection point for power.  In other words, if there is a current path *through* the onboard 3.3v regulator (from unregulated source, through the regulator, to the output) then you've connected things wrong.  The idea is to connect the Adalogger's regulator's output to the very same spot the local regulator's output is connected to (thus bypassing it).
+    <li>Time index: Fri Jan 12 19:50:09 UTC 2018
+
+<li><em>future</em>
+</ul>
+<p>&nbsp;</p>
+
+<p><strong><a href="https://github.com/wa1tnr">wa1tnr on github</a></strong>
+</p>
+
+<!-- img src="paris.jpg" alt="Paris" width="300" height="300" --!>
+
+<img src="./image.d/IMG_14559x77.jpg" alt="wa1tnr January 2018" width="300">
+
+<p>&nbsp;<p>&nbsp;<hr><p>
+<a href="https://validator.w3.org/nu/?showsource=yes&amp;doc=https%3A%2F%2Fwa1tnr.github.io%2F"
+    >Valid HTML</a>
+<p>Rev 000c2
+</body></html>
+
