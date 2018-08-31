@@ -32,9 +32,9 @@ img {
         >https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout/downloads</a>
 which has the schematic diagram for the Seesaw.
 
-    <li>The schematic for the Seesaw Breakout is needed as a sanity check,
-before connecting the 3.3v feed from the Adalogger, to
-the (otherwise unpowered) Seesaw Breakout module.
+    <li>The schematic for the Seesaw Breakout is needed as a sanity
+check, before connecting the 3.3v feed from the Adalogger, to the
+(otherwise unpowered) Seesaw Breakout module.
 
 </ul>
 
@@ -61,21 +61,42 @@ the (otherwise unpowered) Seesaw Breakout module.
 
 <li>rename it to fw.bin (mine was seesaw.bin, from the .zip file)
 
-<li>give it 30 seconds to sync, then eject the SD card (logically, using the user interface, such as Nautilus -- not physically)
+<li>give it 30 seconds to sync, then eject the SD card (logically,
+using the user interface, such as Nautilus -- not physically)
 
 <li>df to check mount points (should be there before the eject was done, but not after)
 
-<li>Once df shows the volume is no longer mounted, it is safe to remove the SD card physically.  You can also use 'eject' at some point (on the command line).  Nautilus ought to have taken care of that, one would suppose.
+<li>Once df shows the volume is no longer mounted, it is safe to
+remove the SD card physically.  You can also use 'eject' at some
+point (on the command line).  Nautilus ought to have taken care of
+that, one would suppose.
 
-<li>Wire them up!  Use the tutorial.  The tricky pins are the 3 volt pins as you have to decide where the power comes from and what it is used to supply power to.
+<li>Wire them up!  Use the tutorial.  The tricky pins are the 3 volt
+pins as you have to decide where the power comes from and what it
+is used to supply power to.
 
 <ul>
 
-    <li>The Adalogger would be the source of the supply voltage, as it'll be the one connected via USB to the host PC.  In the case of the Seesaw Breakout, this is perfectly obvious since it doesn't have an USB connector!
+    <li>The Adalogger would be the source of the supply voltage,
+        as it'll be the one connected via USB to the host PC.
+        In the case of the Seesaw Breakout, this is perfectly
+        obvious since it doesn't have an USB connector!
 
-    <li>Adalogger supplies 3.3VDC on a pin near the corner where the USB connector is. RST, 3V3, AREF, GND are there (in that sequence, from the corner).  Use 3V3.
+    <li>Adalogger supplies 3.3VDC on a pin near the corner where
+        the USB connector is. RST, 3V3, AREF, GND are there (in
+        that sequence, from the corner).  Use 3V3.
 
-    <li>Dean Miller chose 3VO (not Vout) as the interconnect with Gemma M0 power supply.  Schematic of Gemma M0 shows that it's the output of the voltage regulator on the 'client' board (Gemma M0 in the case of the tutorial) that is the connection point for power.  In other words, if there is a current path *through* the onboard 3.3v regulator (from unregulated source, through the regulator, to the output) then you've connected things wrong.  The idea is to connect the Adalogger's regulator's output to the very same spot the local regulator's output is connected to (thus bypassing it).
+    <li>Dean Miller chose 3VO (not Vout) as the interconnect with
+        <strong>Gemma M0</strong> power supply.  Schematic of Gemma M0 shows that
+        it's the output of the voltage regulator on the 'client'
+        board (Gemma M0 in the case of the tutorial) that is the
+        connection point for power.  In other words, if there is a
+        <!-- split here --!>
+        current path *through* the onboard 3.3v regulator (from
+        unregulated source, through the regulator, to the output)
+        then you've connected things wrong.  The idea is to connect
+        the Adalogger's regulator's output to the very same spot
+        the local regulator's output is connected to (thus bypassing it).
 
     <li>Time-index: Fri Jan 12 19:50:09 UTC 2018
 
