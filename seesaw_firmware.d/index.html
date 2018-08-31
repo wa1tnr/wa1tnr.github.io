@@ -62,15 +62,29 @@ the (otherwise unpowered) Seesaw Breakout module.
     <li>Take one last look at the pinout diagram for the Seesaw Breakout.
     <li>Time-index: Fri Jan 12 20:23:45 UTC 2018
 </ul>
-<li><strong>smoke test</strong>Eye protection on! This is the fun part -- to see if it's a short circuit or not.  I like to use a direct DC supply (no laptop or host PC at all, just 5V power via USB 'charger' type of supply).  I put both an on/off switch, and an ammeter, inline.
+
+<li><strong>smoke test</strong> Eye protection on! This is the fun
+part -- to see if it's a short circuit or not.  I like to use a
+direct DC supply (no laptop or host PC at all, just 5V power via USB
+'charger' type of supply).  I put both an on/off switch, and an
+ammeter, inline.
+
 <li>Select the right board in Arduino IDE: Feather M0 (that's also the Adalogger, which has an SPI peripheral in the form of an SD card reader.  Could just as easily be connected externally, so it's not a special target board -- it's a Feather M0).
+
 <li>Prep a serial terminal for 9600 baud connection to the Adalogger.
+
 <li>Find the example sketch (following Dean Miller's tutorial).
+
 <li>Compile and upload to Adalogger!
+
 <li>Time-index: Fri Jan 12 21:31:19 UTC 2018 -- working example is running.  setPWMFreq() is now testable.
+
 <li><strong>servo</strong>: There are three wires.  Brown is GND.  Middle (orange) wire is the +5VDC rail, and the outside (yellow) wire is signal.
+
 <li><strong>Raspberry Pi</strong>: The pinout for the Pi is found in a diagram online.  The +5VDC rail is deep in the corner (two pins in the same long row, and no pins between +5V and the edge of the board in the corner).
+
  Next to the two +5V pins is a GND (there are several GND connections on this 40-pin bus). 
+
 <li><em>future</em>
 </ul>
 
