@@ -41,8 +41,6 @@ check, before connecting the 3.3v feed from the Adalogger, to the
 <li>find <a href="https://github.com/adafruit/seesaw/"
     >https://github.com/adafruit/seesaw/</a>
 
-<!-- a href="https://github.com/adafruit/seesaw/issues/4" --!>
-
 <li>find <a href="https://github.com/adafruit/seesaw/issues/4#issuecomment-356359801"
     >https://github.com/adafruit/seesaw/issues/4#issuecomment-356359801</a>
     which has the needed <em>firmware</em>.
@@ -64,7 +62,8 @@ check, before connecting the 3.3v feed from the Adalogger, to the
 <li>give it 30 seconds to sync, then eject the SD card (logically,
 using the user interface, such as Nautilus -- not physically)
 
-<li>df to check mount points (should be there before the eject was done, but not after)
+<li>df to check mount points (should be there before the eject was
+    done, but not after)
 
 <li>Once df shows the volume is no longer mounted, it is safe to
 remove the SD card physically.  You can also use 'eject' at some
@@ -87,7 +86,8 @@ is used to supply power to.
         that sequence, from the corner).  Use 3V3.
 
     <li>Dean Miller chose 3VO (not Vout) as the interconnect with
-        <strong>Gemma M0</strong> power supply.  Schematic of Gemma M0 shows that
+        <strong>Gemma M0</strong> power supply.  Schematic of
+        Gemma M0 shows that
         it's the output of the voltage regulator on the 'client'
         board (Gemma M0 in the case of the tutorial) that is the
         connection point for power. <p> In other words, if there is a
@@ -102,7 +102,10 @@ is used to supply power to.
 
     <li>Time-index: Fri Jan 12 19:50:09 UTC 2018
 
-    <li>The proper connection to Seesaw Breakout is the 3.3V pin next to the GND pin. Avoid the +5V pin (the only other logical interconnect candidate for supplying power to Seesaw Breakout).
+    <li>The proper connection to Seesaw Breakout is the 3.3V pin
+        next to the GND pin. Avoid the +5V pin (the only other
+        logical interconnect candidate for supplying power to
+        Seesaw Breakout).
 
     <li>Take one last look at the pinout diagram for the Seesaw Breakout.
 
@@ -111,12 +114,15 @@ is used to supply power to.
 </ul>
 
 <li><strong>smoke test</strong> Eye protection on! This is the fun
-part -- to see if it's a short circuit or not.  I like to use a
-direct DC supply (no laptop or host PC at all, just 5V power via USB
-'charger' type of supply).  I put both an on/off switch, and an
-ammeter, inline.
+    part -- to see if it's a short circuit or not.  I like to use a
+    direct DC supply (no laptop or host PC at all, just 5V power via USB
+    'charger' type of supply).  I put both an on/off switch, and an
+    ammeter, inline.
 
-<li>Select the right board in Arduino IDE: Feather M0 (that's also the Adalogger, which has an SPI peripheral in the form of an SD card reader.  Could just as easily be connected externally, so it's not a special target board -- it's a Feather M0).
+<li>Select the right board in Arduino IDE: Feather M0 (that's also
+    the Adalogger, which has an SPI peripheral in the form of an SD
+    card reader.  Could just as easily be connected externally, so
+    it's not a special target board -- it's a Feather M0).
 
 <li>Prep a serial terminal for 9600 baud connection to the Adalogger.
 
