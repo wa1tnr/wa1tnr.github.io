@@ -107,11 +107,9 @@ div {
           &nbsp;<br>
           &nbsp;<br>
 
+          <pre>Tue 11 Oct 21:14:11 UTC 2022   Rev 000c9k-  markdown-nn</pre>
+
           <pre>Tue 11 Oct 20:30:55 UTC 2022   Rev 000c9j-  markdown-mm</pre>
-
-          <pre>Tue 11 Oct 20:16:17 UTC 2022   Rev 000c9j-  markdown-mm</pre>
-
-          <pre>Tue 11 Oct 20:05:51 UTC 2022   Rev 000c9i-  markdown-ll</pre>
 
         </section>
 
@@ -186,10 +184,10 @@ void Fdorom (void * pfa) {
         <section data-transition="fade-out">
           <h3>hello</h3>
           <section data-markdown>
-            <h4>ihello</h4>
             <textarea data-template>
-<code>
-    ```c++
+              <pre>
+                <code data-trim data-noescape>
+    ```
     void setup() {
         Serial.begin(9600);
         pinMode(LED_BUILTIN, OUTPUT);
@@ -202,7 +200,8 @@ void Fdorom (void * pfa) {
         delay(300);
     }
     ```
-</code>
+                </code>
+              </pre>
             </textarea>
           </section>
         </section>
