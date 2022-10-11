@@ -108,7 +108,7 @@ div {
           &nbsp;<br>
 
 
-          <pre>Tue 11 Oct 18:49:54 UTC 2022   Rev 000c8z-  markdown-cc</pre>
+          <pre>Tue 11 Oct 19:02:20 UTC 2022   Rev 000c9a-  markdown-dd</pre>
 
         </section>
 
@@ -189,11 +189,18 @@ That whud a bit underwhelmin, iddinit.  Let's try markdown:
 <section data-markdown>
   <h3>DataMarkdown - p.06</h3>
   <textarea data-template>
-    ```js [1-2|3|4]
-    let a = 1;
-    let b = 2;
-    let c = x => 1 + 2 + x;
-    c(3);
+    ```arduino
+    void setup() {
+        Serial.begin(9600);
+        pinMode(LED_BUILTIN, OUTPUT);
+    }
+
+    void loop() {
+        bool state = digitalRead(LED_BUILTIN);
+        state = !state;
+        digitalWrite(LED_BUILTIN, state);
+        delay(300);
+    }
     ```
   </textarea>
 </section>
