@@ -1,0 +1,6 @@
+[submodule "present-TEST/reveal.js"]
+	path = present-TEST/reveal.js
+	url = https://github.com/hakimel/reveal.js.git
+[submodule "present-TEST/impress.js"]
+	path = present-TEST/impress.js
+	url = https://github.com/bartaz/impress.js
