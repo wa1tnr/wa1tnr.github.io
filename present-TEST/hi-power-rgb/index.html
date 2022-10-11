@@ -13,8 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
     <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="../reveal.js/dist/theme/moon.css" id="theme">
-    <!-- Code syntax highlighting -->
+
     <link rel="stylesheet" href="../flagxor/svfig-talks/common/forth.css">
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css">
 
     <script src="../flagxor/svfig-talks/common/printing.js"></script>
     <script src="../flagxor/svfig-talks/node/node_modules/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -107,9 +108,9 @@ div {
           &nbsp;<br>
           &nbsp;<br>
 
-          <pre>Tue 11 Oct 21:14:11 UTC 2022   Rev 000c9k-  markdown-nn</pre>
+          <pre>Tue 11 Oct 21:27:15 UTC 2022   Rev 000c9l-  markdown-oo</pre>
 
-          <pre>Tue 11 Oct 20:30:55 UTC 2022   Rev 000c9j-  markdown-mm</pre>
+          <pre>Tue 11 Oct 21:14:11 UTC 2022   Rev 000c9k-  markdown-nn</pre>
 
         </section>
 
@@ -183,11 +184,8 @@ void Fdorom (void * pfa) {
 
         <section data-transition="fade-out">
           <h3>hello</h3>
-          <section data-markdown>
-            <textarea data-template>
               <pre>
                 <code data-trim data-noescape>
-    ```
     void setup() {
         Serial.begin(9600);
         pinMode(LED_BUILTIN, OUTPUT);
@@ -199,11 +197,8 @@ void Fdorom (void * pfa) {
         digitalWrite(LED_BUILTIN, state);
         delay(300);
     }
-    ```
                 </code>
               </pre>
-            </textarea>
-          </section>
         </section>
 
         <section data-transition="fade-out">
@@ -229,6 +224,9 @@ void Fdorom (void * pfa) {
     </div>
     <script src="../reveal.js/dist/reveal.js"></script>
     <script src="../reveal.js/plugin/math/math.js"></script>
+
+    <!-- Code syntax highlighting -->
+
     <script src="../reveal.js/plugin/highlight/highlight.js"></script>
     <script src="../reveal.js/plugin/markdown/markdown.js"></script>
     <script>
@@ -238,6 +236,7 @@ void Fdorom (void * pfa) {
         plugins: [ RevealMarkdown ]
       });
     </script>
+    <script>hljs.highlightAll();</script>
     <script src="../flagxor/svfig-talks/common/forth.js"></script>
     <p>
         That's pretty much it. ;) -wa1tnr, October, 2022
@@ -245,7 +244,7 @@ void Fdorom (void * pfa) {
     <p>&nbsp;<p>&nbsp;<hr><p>
     <a href="https://validator.w3.org/nu/?showsource=yes&amp;doc=https%3A%2F%2Fwa1tnr.github.io%2F"
     >Valid HTML</a>
-    <p>Rev 000c9i-  markdown-ll
-    <p>Tue 11 Oct 20:05:51 UTC 2022
+    <p>Rev 000c9l-  markdown-oo
+    <p>Tue 11 Oct 21:27:15 UTC 2022
   </body>
 </html>
