@@ -108,7 +108,7 @@ div {
           &nbsp;<br>
 
 
-          <pre>Tue 11 Oct 19:06:57 UTC 2022   Rev 000c9b-  markdown-ee</pre>
+          <pre>Tue 11 Oct 19:20:06 UTC 2022   Rev 000c9c-  markdown-ff</pre>
 
         </section>
 
@@ -169,7 +169,6 @@ void Fdorom (void * pfa) {
 <!--    boundary     -->
 
 
-
         <section data-transition="fade-out">
           <h3>FourthSecond plate - p.05</h3>
           <pre>
@@ -178,9 +177,8 @@ void Fdorom (void * pfa) {
 That whud a bit underwhelmin, iddinit.  Let's try markdown:
 
 
-<section data-markdown>
-  <h3>DataMarkdown - p.06</h3>
-  <textarea data-template>
+              <section data-markdown>
+                <textarea data-template>
     ```cpp
     void setup() {
         Serial.begin(9600);
@@ -194,14 +192,43 @@ That whud a bit underwhelmin, iddinit.  Let's try markdown:
         delay(300);
     }
     ```
-  </textarea>
-</section>
-
-
-
+                </textarea>
+              </section>
             </code>
           </pre>
         </section>
+
+<!--    boundary     -->
+
+
+        <section data-transition="fade-out">
+          <h3>FourthSecond plate - p.06</h3>
+
+Just coded code code stuff.
+
+
+              <section data-markdown>
+                <textarea data-template>
+    ```cpp
+    void setup() {
+        Serial.begin(9600);
+        pinMode(LED_BUILTIN, OUTPUT);
+    }
+
+    void loop() {
+        bool state = digitalRead(LED_BUILTIN);
+        state = !state;
+        digitalWrite(LED_BUILTIN, state);
+        delay(300);
+    }
+    ```
+                </textarea>
+              </section>
+        </section>
+
+
+
+
 
 
 
